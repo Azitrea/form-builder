@@ -1,1 +1,17 @@
-<p>parent-form works!</p>
+<div>Parent form</div>
+<form [formGroup]="parentForm">
+  <!--   <input formControlName="id">
+  <br>
+  <input formControlName="name">
+  <br>
+  <input formControlName="age">
+ -->
+  <br>
+  <div>ID: {{parentForm.value.id}}</div>
+  <br>
+  <div>Name: {{parentForm.value.name}}</div>
+  <br>
+  <div>Age: {{parentForm.value.age}}</div>
+  <br>
+  <app-child-form [parentForm]="parentForm"></app-child-form>
+</form>

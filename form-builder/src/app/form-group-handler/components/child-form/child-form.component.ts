@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-child-form',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child-form.component.scss']
 })
 export class ChildFormComponent implements OnInit {
+  @Input() parentForm: FormGroup;
 
   constructor() { }
 

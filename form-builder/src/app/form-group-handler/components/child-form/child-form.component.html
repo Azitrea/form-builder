@@ -1,1 +1,10 @@
-<p>child-form works!</p>
+<hr>
+<p>Child form</p>
+
+<div [formGroup]="parentForm">
+  <input formControlName="id">
+  <br>
+  <input formControlName="name">
+  <br>
+  <input formControlName="age">
+</div>
