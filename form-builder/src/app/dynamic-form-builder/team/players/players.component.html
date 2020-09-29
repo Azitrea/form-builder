@@ -1,0 +1,31 @@
+<form [formGroup]="playerForm">
+  <table>
+    <tr>
+      <td>
+        <div>
+          <input matInput formControlName="firstName" placeholder="First Name">
+        </div>
+      </td>
+      <td>
+        <div>
+          <input matInput formControlName="lastName" placeholder="Last Name">
+        </div>
+      </td>
+      <td>
+        <div>
+          <input matInput formControlName="position" placeholder="Position">
+        </div>
+      </td>
+      <td>
+        <div>
+          <input matInput formControlName="number" placeholder="Number">
+        </div>
+      </td>
+      <td>
+        <!-- emit delete event up w/ index of player -->
+        <button (click)="delete()">Delete</button>
+      </td>
+    </tr>
+  </table>
+  <pre>Player Form Status: <span class="status">{{playerForm.status}}</span></pre>
+</form>
