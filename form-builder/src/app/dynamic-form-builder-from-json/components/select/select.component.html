@@ -1,1 +1,5 @@
-<p>select works!</p>
+<form [formGroup]="group">
+  <select [formControlName]="field.name">
+    <option *ngFor="let item of field.options" [value]="item">{{ item }}</option>
+  </select>
+</form>
