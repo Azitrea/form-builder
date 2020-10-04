@@ -1,1 +1,12 @@
-<p>dynamic-form works!</p>
+<div style="display: flex;">
+  <form class="dynamic-form" [formGroup]="form" (submit)="onSubmit($event)">
+
+    <!--Generates form groups -- Changes required: change form group to form array-->
+    <ng-container *ngFor="let field of fields;" dynamicField [field]="field" [group]="form"></ng-container>
+  
+  </form>
+  
+  <pre style="padding-left: 30px;">
+    {{form.value | json}}
+  </pre>
+</div>

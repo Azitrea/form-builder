@@ -1,0 +1,22 @@
+<div style="display: flex;">
+  <div style="width: 50%">
+    <dynamic-form [fields]="regConfig" (formSubmit)="submit($event)"></dynamic-form>
+  </div>
+  <div>
+    <div>
+      Add new form fields
+    </div>
+    <div style="border: 1px solid black; padding: 5px">
+      <button (click)="input()">Input</button>
+      <div>Question</div>
+      <input [(ngModel)]="questionModel">
+    </div>
+    <div>
+      <button (click)="select()">Select</button>
+    </div>
+    <div>
+      <button (click)="check()">CheckBox</button>
+    </div>
+  </div>
+</div>
+

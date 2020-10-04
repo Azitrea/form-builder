@@ -7,7 +7,8 @@ import { DateComponent } from './components/date/date.component';
 import { RadiobuttonComponent } from './components/radiobutton/radiobutton.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { DynamicFieldDirective } from './dynamic-field/dynamic-field.directive';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TestComponent } from './test/test.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 
 
@@ -22,10 +23,20 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
     CheckboxComponent,
     DynamicFieldDirective,
     DynamicFormComponent,
+    TestComponent,
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ReactiveFormsModule,
+  ],
+  entryComponents: [
+    InputComponent,
+    ButtonComponent,
+    SelectComponent,
+    DateComponent,
+    RadiobuttonComponent,
+    CheckboxComponent
   ]
 })
 export class DynamicFormBuilderFromJsonModule { }

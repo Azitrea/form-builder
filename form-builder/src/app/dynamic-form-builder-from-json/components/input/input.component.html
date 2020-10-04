@@ -1,4 +1,5 @@
 <form [formGroup]="group">
+  <div *ngIf="field.question">{{field.question}}</div>
   <input [formControlName]="field.name" [placeholder]="field.label" [type]="field.inputType">
 
   <ng-container *ngFor="let validation of field.validations;">
